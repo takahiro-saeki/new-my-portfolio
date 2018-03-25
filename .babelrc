@@ -1,0 +1,36 @@
+{
+  "presets": [
+    "react",
+    ["env", {
+      "useBuiltIns": true,
+      "targets": {
+        "browsers": [
+          "last 2 versions",
+          "not ie <= 10"
+        ]
+      },
+      "modules": false,
+      "loose": true
+    }]
+  ],
+  "plugins": [
+    ["transform-runtime", {
+      "helpers": false,
+      "polyfill": false,
+      "regenerator": true,
+      "moduleName": "babel-runtime"
+    }],
+    "transform-decorators-legacy",
+    "transform-async-to-generator",
+    "react-hot-loader/babel",
+    "transform-function-bind",
+    "transform-es2015-modules-commonjs",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-flow-strip-types", [
+      "module-resolver", {
+        "root": ["./src/js"]
+      }
+    ]
+  ]
+}
