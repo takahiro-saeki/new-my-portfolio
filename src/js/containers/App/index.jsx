@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
 import NavBar from 'components/NavBar';
+import Header from 'components/Header';
+import lang from 'lang';
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.items = [
-      {
-        title: 'SKILL'
-      },
-      {
-        title: 'WORK'
-      },
-      {
-        title: 'TIMELINE'
-      },
-      {
-        title: 'CONTACT'
-      }
-    ]
+    this.state = {
+      height: 0
+    }
+  }
+
+  componentDidMount = () => {
+    this.setState({
+      height: window.innerHeight
+    })
   }
 
   render() {
+    const { height } = this.state;
+
     return (
       <div>
-        <NavBar list={this.items} />
-        <Grid>App</Grid>
+        <NavBar list={lang('EN').MENU_LIST} />
+        <Header height={height} />
       </div>
     )
   }
