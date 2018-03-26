@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from 'components/NavBar';
 import Header from 'components/Header';
+import SkillArea from 'components/SkillArea';
 import lang from 'lang';
 
 export default class App extends Component {
@@ -24,6 +25,7 @@ export default class App extends Component {
       <div>
         <NavBar list={lang('EN').MENU_LIST} />
         <Header height={height} />
+        <SkillArea />
       </div>
     )
   }
