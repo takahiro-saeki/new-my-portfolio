@@ -4,6 +4,8 @@ import Header from 'components/Header';
 import SkillArea from 'components/SkillArea';
 import Footer from 'components/Footer';
 import Work from 'components/Work';
+import Timeline from 'components/Timeline';
+import Contact from 'components/Contact';
 import lang from 'lang';
 
 export default class App extends Component {
@@ -29,6 +31,8 @@ export default class App extends Component {
         <Header height={height} />
         <SkillArea />
         <Work />
+        <Timeline />
+        <Contact />
         <Footer />
       </div>
     )
