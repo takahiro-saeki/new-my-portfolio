@@ -3,6 +3,7 @@ import NavBar from 'components/NavBar';
 import Header from 'components/Header';
 import SkillArea from 'components/SkillArea';
 import Footer from 'components/Footer';
+import Work from 'components/Work';
 import lang from 'lang';
 
 export default class App extends Component {
@@ -27,6 +28,7 @@ export default class App extends Component {
         <NavBar list={lang('EN').MENU_LIST} />
         <Header height={height} />
         <SkillArea />
+        <Work />
         <Footer />
       </div>
     )

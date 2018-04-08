@@ -11,22 +11,21 @@ document.body.style.margin = 0;
 render(
   <AppContainer>
     <MuiThemeProvider muiTheme={getMuiTheme()}>
-      <App/>
+      <App />
     </MuiThemeProvider>
   </AppContainer>,
   document.getElementById('app')
 );
 
-/*
+
 if (module.hot) {
   module.hot.accept('./containers/App', () => {
     const RootContainer = require('./containers/App').default;
     render(
       <AppContainer>
-        <RootContainer />
+        <App />
       </AppContainer>,
       document.getElementById('app')
     );
   });
 }
-*/

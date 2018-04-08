@@ -3,7 +3,7 @@ import Container from './style';
 
 const Footer = () => (
   <Container>
-    <div>© <span>2018</span> takahiro-saeki</div>
+    <div>© <span>{new Date().getFullYear()}</span> takahiro-saeki</div>
   </Container>
 )
 
