@@ -2,7 +2,7 @@ const dataMock = [
   {
     id: 1,
     title: 'Togetter',
-    date: '2017/10 - 2018/4 (current job)',
+    date: '2017/10 - 2018/4',
     content: `
       Gathering Tweet service app's company. I'm implementing features and maintaining
       development environment for React-Native application. Main Technology Stack is ReactNative,
@@ -12,7 +12,7 @@ const dataMock = [
   {
     id: 2,
     title: `Big EC service company's e-book service department.`,
-    date: '2017/3 - 2018/4(current)',
+    date: '2017/3 - 2018/4',
     content: `
       I'm implementing features for website like carousel, slider, menu button, and more. also,
       I'm teaching front-end developers who are colleagues about modern front end development.
