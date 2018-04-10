@@ -1,5 +1,12 @@
 import React from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+import {
+  Card,
+  CardActions,
+  CardHeader,
+  CardMedia,
+  CardTitle,
+  CardText
+} from 'material-ui/Card';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { colorGenerator, iconGenerator } from './domain';
 import adjustStyle from './adjustStyle';
@@ -15,8 +22,12 @@ const SkillArea = () => (
         <SectionHeader>SKILL</SectionHeader>
       </Col>
     </Row>
-    <Row>{Object.values(textMock).map((item, i) => <ListChild data={item} id={i} key={v4()} />)}</Row>
+    <Row>
+      {Object.values(textMock).map((item, i) => (
+        <ListChild data={item} id={i} key={v4()} />
+      ))}
+    </Row>
   </Grid>
-)
+);
 
 export default SkillArea;

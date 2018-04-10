@@ -34,6 +34,6 @@ const dataMock = [
       I got the good experience to make web site and design.
     `
   }
-]
+];
 
 export default dataMock;

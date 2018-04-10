@@ -11,19 +11,19 @@ const Work = () => (
     </Row>
     <Row>
       <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')}/>
+        <ResponsiveImg src={require('../../../img/book1.png')} />
       </Col>
       <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')}/>
+        <ResponsiveImg src={require('../../../img/book1.png')} />
       </Col>
       <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')}/>
+        <ResponsiveImg src={require('../../../img/book1.png')} />
       </Col>
       <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')}/>
+        <ResponsiveImg src={require('../../../img/book1.png')} />
       </Col>
     </Row>
   </Grid>
-)
+);
 
 export default Work;

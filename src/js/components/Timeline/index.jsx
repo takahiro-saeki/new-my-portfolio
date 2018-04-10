@@ -13,6 +13,6 @@ const Timeline = () => (
       <div>test</div>
     </Row>
   </Grid>
-)
+);
 
 export default Timeline;

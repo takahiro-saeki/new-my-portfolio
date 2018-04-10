@@ -13,14 +13,14 @@ export default class App extends Component {
     super(props);
     this.state = {
       height: 0
-    }
+    };
   }
 
   componentDidMount = () => {
     this.setState({
       height: window.innerHeight
-    })
-  }
+    });
+  };
 
   render() {
     const { height } = this.state;
@@ -35,6 +35,6 @@ export default class App extends Component {
         <Contact />
         <Footer />
       </div>
-    )
+    );
   }
 }

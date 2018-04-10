@@ -8,6 +8,6 @@ const adjustStyle = {
     fontSize: '1rem',
     fontWeight: 'bold'
   }
-}
+};
 
 export default adjustStyle;

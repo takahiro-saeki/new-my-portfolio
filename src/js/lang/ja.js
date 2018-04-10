@@ -24,6 +24,6 @@ const ja = {
       LIST_AREA: ''
     }
   }
-}
+};
 
 export default ja;

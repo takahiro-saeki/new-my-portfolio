@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-const ListChild = ({data, id}) => {
-  return <div>ListChild</div>
-}
+const ListChild = ({ data, id }) => {
+  return <div>ListChild</div>;
+};
 
-export default ListChild
+export default ListChild;

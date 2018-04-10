@@ -31,6 +31,6 @@ const dataMock = [
     title: 'react-politicians-library',
     tag: ['React.js']
   }
-]
+];
 
 export default dataMock;

@@ -11,8 +11,8 @@ export const Container = styled.div`
   left: 0;
   bottom: 0;
   margin: auto;
-  color: #FFF;
-`
+  color: #fff;
+`;
 
 export const IconArea = styled.img`
   width: 150px;
@@ -20,4 +20,4 @@ export const IconArea = styled.img`
   border-radius: 50%;
   margin-bottom: 1rem;
   vertical-align: bottom;
-`
+`;

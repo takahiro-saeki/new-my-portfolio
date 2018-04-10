@@ -17,7 +17,6 @@ render(
   document.getElementById('app')
 );
 
-
 if (module.hot) {
   module.hot.accept('./containers/App', () => {
     const RootContainer = require('./containers/App').default;

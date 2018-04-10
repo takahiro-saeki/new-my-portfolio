@@ -13,15 +13,21 @@ export const colorGenerator = color => ({
   border: `1px solid ${color}`,
   color,
   borderRadius: '50%'
-})
+});
 
 export const iconGenerator = id => {
-  switch(id) {
-    case 0: return <Language style={colorGenerator('#C2185B')} />
-    case 1: return <Work style={colorGenerator('#0097A7')} />
-    case 2: return <QueryBuilder style={colorGenerator('#E64A19')} />
-    case 3: return <PhotoLibrary style={colorGenerator('#00796B')} />
-    case 4: return <ImportExport style={colorGenerator('#7B1FA2')} />
-    case 5: return <VerifiedUser style={colorGenerator('#303F9F')} />
+  switch (id) {
+    case 0:
+      return <Language style={colorGenerator('#C2185B')} />;
+    case 1:
+      return <Work style={colorGenerator('#0097A7')} />;
+    case 2:
+      return <QueryBuilder style={colorGenerator('#E64A19')} />;
+    case 3:
+      return <PhotoLibrary style={colorGenerator('#00796B')} />;
+    case 4:
+      return <ImportExport style={colorGenerator('#7B1FA2')} />;
+    case 5:
+      return <VerifiedUser style={colorGenerator('#303F9F')} />;
   }
-}
+};

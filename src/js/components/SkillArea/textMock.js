@@ -65,6 +65,6 @@ const textMock = {
     `,
     title: `SERVER & OTHER`
   }
-}
+};
 
-export default textMock
+export default textMock;

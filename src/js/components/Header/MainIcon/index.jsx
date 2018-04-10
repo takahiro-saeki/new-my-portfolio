@@ -11,6 +11,6 @@ const MainIcon = () => (
     <br />
     <span>{lang('EN').NAME_DESC}</span>
   </Container>
-)
+);
 
 export default MainIcon;
