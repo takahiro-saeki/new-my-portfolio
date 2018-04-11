@@ -1,18 +1,23 @@
+// @flow
+
 import React from 'react';
 import { Col } from 'react-flexbox-grid';
-import {
-  Card,
-  CardActions,
-  CardHeader,
-  CardMedia,
-  CardTitle,
-  CardText
-} from 'material-ui/Card';
+import { Card, CardTitle, CardText } from 'material-ui/Card';
 import { iconGenerator } from '../domain';
 import adjustStyle from '../adjustStyle';
 import IconArea from './style';
 
-const ListChild = ({ data, id }) => (
+type Props = {
+  data: {
+    title: string,
+    main: string,
+    cartTitlei: string,
+    list: string
+  },
+  id: number
+};
+
+const ListChild = ({ data, id }: Props) => (
   <Col xs={12} sm={6} md={6} lg={4}>
     <Card>
       <IconArea>{iconGenerator(id)}</IconArea>
@@ -25,5 +30,10 @@ const ListChild = ({ data, id }) => (
     </Card>
   </Col>
 );
+
+ListChild.defaultProps = {
+  data: {},
+  id: 0
+};
 
 export default ListChild;

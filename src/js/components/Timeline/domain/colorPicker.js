@@ -1,4 +1,6 @@
-const colorPicker = id => {
+// @flow
+
+const colorPicker = (id: number) => {
   switch (id) {
     case 1:
       return { background: `linear-gradient(#B71C1C, #F44336)` };

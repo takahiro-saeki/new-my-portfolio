@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import { v4 } from 'uuid';
 import dataMock from './dataMock';
 import { SectionHeader, ResponsiveImg } from './style';
 
@@ -11,11 +12,9 @@ const Work = () => (
       </Col>
     </Row>
     <Row>
-      {dataMock.map(item => (
-        <Col xs={12} sm={6} md={6} lg={4}>
-          <div>
-            {import(item.path).then(item => console.log(item))}
-          </div>
+      {dataMock.map(() => (
+        <Col xs={12} sm={6} md={6} lg={4} key={v4()}>
+          <div>test</div>
         </Col>
       ))}
       <Col xs={12} sm={6} md={6} lg={4}>

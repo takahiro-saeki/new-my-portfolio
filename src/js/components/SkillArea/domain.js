@@ -1,3 +1,5 @@
+// @flow
+
 import React from 'react';
 import Language from 'material-ui/svg-icons/action/language';
 import Work from 'material-ui/svg-icons/action/work';
@@ -6,7 +8,7 @@ import PhotoLibrary from 'material-ui/svg-icons/image/photo-library';
 import ImportExport from 'material-ui/svg-icons/communication/import-export';
 import VerifiedUser from 'material-ui/svg-icons/action/verified-user';
 
-export const colorGenerator = color => ({
+export const colorGenerator = (color: string) => ({
   height: '80px',
   width: '80px',
   padding: '1.5rem',
@@ -15,7 +17,7 @@ export const colorGenerator = color => ({
   borderRadius: '50%'
 });
 
-export const iconGenerator = id => {
+export const iconGenerator = (id: number) => {
   switch (id) {
     case 0:
       return <Language style={colorGenerator('#C2185B')} />;

@@ -1,23 +1,33 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es6": true
-  },
   "extends": [
     "airbnb",
     "prettier",
+    "prettier/flowtype",
     "prettier/react",
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "parser": "babel-eslint",
   "parserOptions": {
-    "ecmaVersion": 8,
     "ecmaFeatures": {
-      "modules": true,
       "jsx": true
     }
   },
-  "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": [ "pc/components/**/*.jsx" ],
+      "excludedFiles": "*.test.js",
+      "rules": {
+        "quotes": [ 2, "single" ]
+      }
+    }
+  ],
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": [
@@ -28,11 +38,20 @@ module.exports = {
       },
     ],
     "comma-dangle": 0,
-    "react/react-in-jsx-scope": 0,
-    "no-unused-vars": [0, { "varsIgnorePattern": "^h$" }],
-    "react/no-did-mount-set-state": 0,
-    "jsx-a11y/label-has-for": 0,
+    "import/no-extraneous-dependencies": 0,
+    "react/default-props-match-prop-types": 0,
     "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0
+    "react/no-array-index-key": 0,
+    "react/display-name": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "react/no-did-mount-set-state": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "react/forbid-prop-types": 1,
+    "react/jsx-filename-extension": 1
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
   }
-};
+}

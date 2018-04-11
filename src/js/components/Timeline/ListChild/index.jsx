@@ -1,13 +1,24 @@
+// @flow
+
 import React from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 import colorPicker from '../domain/colorPicker';
 import { CompanyArea, DescArea } from './style';
 
 const baseMargin = {
   margin: '1rem auto'
-}
+};
 
-const ListChild = ({ data }) => {
+type Props = {
+  data: {
+    id: number,
+    title: string,
+    date: string,
+    content: string
+  }
+};
+
+const ListChild = ({ data }: Props) => {
   if (data.id % 2 !== 0) {
     return (
       <Row style={baseMargin}>
@@ -35,7 +46,11 @@ const ListChild = ({ data }) => {
         </CompanyArea>
       </Col>
     </Row>
-  )
+  );
+};
+
+ListChild.defaultProps = {
+  data: {}
 };
 
 export default ListChild;

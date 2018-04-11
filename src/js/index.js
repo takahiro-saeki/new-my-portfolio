@@ -22,7 +22,7 @@ if (module.hot) {
     const RootContainer = require('./containers/App').default;
     render(
       <AppContainer>
-        <App />
+        <RootContainer />
       </AppContainer>,
       document.getElementById('app')
     );
