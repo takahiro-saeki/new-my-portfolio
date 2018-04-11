@@ -3,6 +3,9 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import { v4 } from 'uuid';
 import dataMock from './dataMock';
 import { SectionHeader, ResponsiveImg } from './style';
+import imgConfig from './domain/imgConfig';
+
+console.log(imgConfig)
 
 const Work = () => (
   <Grid>
