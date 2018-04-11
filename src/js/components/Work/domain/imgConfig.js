@@ -16,4 +16,4 @@ export default {
   github3,
   media1,
   media2
-}
+};
