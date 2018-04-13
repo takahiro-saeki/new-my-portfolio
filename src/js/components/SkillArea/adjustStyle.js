@@ -1,7 +1,6 @@
 const adjustStyle = {
   grid: {
-    maxWidth: '1024px',
-    width: '100%',
+    boxSizing: 'border-box',
     padding: '1rem'
   },
   cardTitle: {

@@ -1,37 +1,25 @@
 import React from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { v4 } from 'uuid';
+import SectionHeader from 'components/SectionHeader';
 import dataMock from './dataMock';
-import { SectionHeader, ResponsiveImg } from './style';
-import imgConfig from './domain/imgConfig';
+import { ResponsiveImg, ChildTitle, ChildTag } from './style';
 
 const Work = () => (
   <Grid>
     <Row>
       <Col xs={12}>
-        <SectionHeader>SKILL</SectionHeader>
+        <SectionHeader title="Work" />
       </Col>
     </Row>
     <Row>
-      {dataMock.map(() => (
+      {dataMock.map(item => (
         <Col xs={12} sm={6} md={6} lg={4} key={v4()}>
-          <div>test</div>
+          <ResponsiveImg src={item.path} />
+          <ChildTitle>{item.title}</ChildTitle>
+          <ChildTag>{`${item.tag}`}</ChildTag>
         </Col>
       ))}
-      <Col xs={12} sm={6} md={6} lg={4}>
-        <div>
-          <ResponsiveImg src={require('../../../img/book1.png')} />
-        </div>
-      </Col>
-      <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')} />
-      </Col>
-      <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')} />
-      </Col>
-      <Col xs={12} sm={6} md={6} lg={4}>
-        <ResponsiveImg src={require('../../../img/book1.png')} />
-      </Col>
     </Row>
   </Grid>
 );
