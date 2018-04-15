@@ -20,4 +20,5 @@ export const IconArea = styled.img`
   border-radius: 50%;
   margin-bottom: 1rem;
   vertical-align: bottom;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
 `;

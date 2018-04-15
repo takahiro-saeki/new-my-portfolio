@@ -1,16 +1,20 @@
 const en = {
   MENU_LIST: [
     {
-      title: 'SKILL'
+      title: 'SKILL',
+      link: 'skill'
     },
     {
-      title: 'WORK'
+      title: 'WORK',
+      link: 'work'
     },
     {
-      title: 'TIMELINE'
+      title: 'TIMELINE',
+      link: 'timeline'
     },
     {
-      title: 'CONTACT'
+      title: 'CONTACT',
+      link: 'contact'
     }
   ],
   NAME: 'TAKAHIRO SAEKI',
