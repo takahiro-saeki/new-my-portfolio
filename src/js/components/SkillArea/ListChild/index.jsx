@@ -5,7 +5,7 @@ import { Col } from 'react-flexbox-grid';
 import { Card, CardTitle, CardText } from 'material-ui/Card';
 import { iconGenerator } from '../domain';
 import adjustStyle from '../adjustStyle';
-import IconArea from './style';
+import { IconArea, BasePadding, DashedHr } from './style';
 
 type Props = {
   data: {
@@ -23,9 +23,9 @@ const ListChild = ({ data, id }: Props) => (
       <IconArea>{iconGenerator(id)}</IconArea>
       <CardTitle title={data.title} titleStyle={adjustStyle.cardTitle} />
       <CardText>{data.main}</CardText>
-      <div>
-        <hr />
-      </div>
+      <BasePadding>
+        <DashedHr />
+      </BasePadding>
       <CardText>{data.list}</CardText>
     </Card>
   </Col>
