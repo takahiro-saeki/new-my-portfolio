@@ -20,6 +20,7 @@
       "regenerator": true,
       "moduleName": "babel-runtime"
     }],
+    "ramda",
     "transform-decorators-legacy",
     "transform-async-to-generator",
     "react-hot-loader/babel",
