@@ -12,16 +12,40 @@ class Contact extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      email: '',
-      title: '',
-      content: '',
+      name: {
+        isChanged: false,
+        value: ''
+      },
+      email: {
+        isChanged: false,
+        value: ''
+      },
+      title: {
+        isChanged: false,
+        value: ''
+      },
+      content: {
+        isChanged: false,
+        value: ''
+      },
       isValid: false
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     console.log('data', {prevProps, prevState, currentState: this.state })
+    console.log('isValid', this.validate(this.state))
+    if(!this.state.isValid) {
+      if(this.validate(this.state)) {
+        return this.setState(({isValid: true}))
+      }
+    } else if(this.state.isValid && this.validate(this.state)) {
+      return false
+    } else {
+      return this.setState({isValid: false})
+    }
+    //const validateParam = () => console.log('validation')
+    //console.log(this.validate(this.state))
     /*
     if(!this.state.isValid) {
       if(!this.validate(this.state)) {
@@ -33,31 +57,37 @@ class Contact extends Component {
   }
 
   validate = (formData) => {
-    if(isEmpty(formData.name)) {
+    if(isEmpty(formData.name.value)) {
       return false
     }
-    if(!isEmail(formData.email)) {
+    if(!isEmail(formData.email.value)) {
       return false
     }
-    if(isEmpty(formData.title)) {
+    if(isEmpty(formData.title.value)) {
       return false
     }
-    if(isEmpty(formData.content)) {
+    if(isEmpty(formData.content.value)) {
       return false
     }
     return true
   }
 
   handleChange = (flag, text) => {
-    const zip = zipObj([flag])([text]);
-    this.setState(zip);
+    this.setState(state => state[flag].value = text)
+  }
+
+  validateForm = (flag, text) => {
+    switch(flag) {
+      case 'name': return !isEmail(text)
+      default: return false
+    }
   }
 
   render() {
-    const { isValid } = this.state;
+    const { isValid, name, email, title, content } = this.state;
 
     return (
-      <Element name="c;;ontact">
+      <Element name="contact">
         <Container>
           <SectionHeader title="Contact" />
           <Card style={{ padding: '1rem' }}>
