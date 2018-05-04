@@ -8,6 +8,7 @@ export const CompanyArea = styled.div`
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   height: auto;
   color: #fff;
+  height: 100%;
 `;
 
 export const DescArea = styled.div`
