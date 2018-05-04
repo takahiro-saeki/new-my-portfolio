@@ -33,8 +33,6 @@ class Contact extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log('data', {prevProps, prevState, currentState: this.state })
-    console.log('isValid', this.validate(this.state))
     if(!this.state.isValid) {
       if(this.validate(this.state)) {
         return this.setState(({isValid: true}))
@@ -44,16 +42,6 @@ class Contact extends Component {
     } else {
       return this.setState({isValid: false})
     }
-    //const validateParam = () => console.log('validation')
-    //console.log(this.validate(this.state))
-    /*
-    if(!this.state.isValid) {
-      if(!this.validate(this.state)) {
-
-      }
-      this.setState({isValid: true})
-    }
-    */
   }
 
   validate = (formData) => {
@@ -81,8 +69,8 @@ class Contact extends Component {
       case 'name': return !isEmail(text)
       default: return false
     }
-  }
-
+  };
+  
   render() {
     const { isValid, name, email, title, content } = this.state;
 
