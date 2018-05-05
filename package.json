@@ -38,6 +38,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "copy-webpack-plugin": "^4.5.1",
     "cross-env": "^5.1.4",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
@@ -79,7 +80,7 @@
   "repository": "https://github.com/takahiro-saeki/new-my-portfolio.git",
   "scripts": {
     "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production --progress",
-    "clean": "rimraf 'dist/*.{js,json,svg,png,css,woff,woff2,ttf,eot,html}'",
+    "clean": "rimraf 'dist/*.{js,json,svg,png,css,woff,woff2,ttf,eot,html,map}'",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --progress",
     "lint": "eslint src/js/* --ext .js --ext .jsx --fix --quiet --cache",
     "flow": "flow"
