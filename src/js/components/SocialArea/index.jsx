@@ -1,7 +1,5 @@
 import React from 'react';
 
-const SocialArea = () => (
-  
-)
+const SocialArea = () => <div>social area.</div>;
 
 export default SocialArea;

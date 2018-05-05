@@ -19,7 +19,7 @@ type Props = {
 
 const ListChild = ({ data, id }: Props) => (
   <Col xs={12} sm={6} md={6} lg={4}>
-    <Card style={{marginBottom: '1rem'}}>
+    <Card style={{ marginBottom: '1rem' }}>
       <IconArea>{iconGenerator(id)}</IconArea>
       <CardTitle title={data.title} titleStyle={adjustStyle.cardTitle} />
       <CardText>{data.main}</CardText>

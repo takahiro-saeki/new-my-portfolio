@@ -5,12 +5,7 @@ import { v4 } from 'uuid';
 import SectionHeader from 'components/SectionHeader';
 import Link from 'components/Link';
 import dataMock from './dataMock';
-import {
-  ResponsiveImg,
-  ChildTitle,
-  ChildTag,
-  ContentWrapper
-} from './style';
+import { ResponsiveImg, ChildTitle, ChildTag, ContentWrapper } from './style';
 
 const Work = () => (
   <Element name="work">

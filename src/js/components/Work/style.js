@@ -5,13 +5,12 @@ export const ResponsiveImg = styled.img`
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-  transition: .5s;
+  transition: 0.5s;
   cursor: pointer;
   &:hover {
-    box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14),
-    0 3px 14px 2px rgba(0,0,0,0.12),
-    0 5px 5px -3px rgba(0,0,0,0.2);
-    opacity: .7;
+    box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+    opacity: 0.7;
   }
 `;
 

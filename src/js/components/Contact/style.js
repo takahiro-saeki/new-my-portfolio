@@ -12,4 +12,4 @@ export const BtnContainer = styled.div`
   max-width: 300px;
   margin: 0 auto;
   padding: 2rem 0;
-`
+`;
