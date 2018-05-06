@@ -8,6 +8,8 @@ import { Card } from 'material-ui/Card';
 import SectionHeader from 'components/SectionHeader';
 import { Container, BtnContainer } from './style';
 
+const action = 'https://form.run/api/v1/r/74mjwnqxgdxlle2tjvapcj0v';
+
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -74,63 +76,56 @@ class Contact extends Component {
   };
 
   render() {
-    const { isValid, name, email, title, content } = this.state;
+    const { isValid } = this.state;
 
     return (
       <Element name="contact">
         <Container>
-          <form
-            action="https://form.run/api/v1/r/74mjwnqxgdxlle2tjvapcj0v"
-            method="post"
-          >
+          <form action={action} method="post">
             <SectionHeader title="Contact" />
             <Card style={{ padding: '1rem' }}>
-              <form
-                action="https://form.run/api/v1/r/jtbMRyJTs0cSTI4phiqC"
-                method="post"
-              >
-                <TextField
-                  type="name"
-                  hintText="yamada tarou"
-                  floatingLabelText="name"
-                  floatingLabelFixed
+              <TextField
+                type="name"
+                hintText="yamada tarou"
+                floatingLabelText="name"
+                floatingLabelFixed
+                fullWidth
+                onChange={e => this.handleChange('name', e.target.value)}
+              />
+              <br />
+              <TextField
+                hintText="email"
+                floatingLabelText="xyz-placeholder@gmail.com"
+                floatingLabelFixed
+                fullWidth
+                onChange={e => this.handleChange('email', e.target.value)}
+              />
+              <br />
+              <TextField
+                hintText="title"
+                floatingLabelText="here is content"
+                floatingLabelFixed
+                fullWidth
+                onChange={e => this.handleChange('title', e.target.value)}
+              />
+              <br />
+              <TextField
+                hintText="content"
+                floatingLabelText="here is content"
+                floatingLabelFixed
+                fullWidth
+                onChange={e => this.handleChange('content', e.target.value)}
+              />
+              <br />
+              <BtnContainer>
+                <RaisedButton
+                  type="submit"
+                  label="SUBMIT"
+                  primary
                   fullWidth
-                  onChange={e => this.handleChange('name', e.target.value)}
+                  disabled={!isValid}
                 />
-                <br />
-                <TextField
-                  hintText="email"
-                  floatingLabelText="xyz-placeholder@gmail.com"
-                  floatingLabelFixed
-                  fullWidth
-                  onChange={e => this.handleChange('email', e.target.value)}
-                />
-                <br />
-                <TextField
-                  hintText="title"
-                  floatingLabelText="here is content"
-                  floatingLabelFixed
-                  fullWidth
-                  onChange={e => this.handleChange('title', e.target.value)}
-                />
-                <br />
-                <TextField
-                  hintText="content"
-                  floatingLabelText="here is content"
-                  floatingLabelFixed
-                  fullWidth
-                  onChange={e => this.handleChange('content', e.target.value)}
-                />
-                <br />
-                <BtnContainer>
-                  <RaisedButton
-                    label="SUBMIT"
-                    primary
-                    fullWidth
-                    disabled={!isValid}
-                  />
-                </BtnContainer>
-              </form>
+              </BtnContainer>
             </Card>
           </form>
         </Container>
