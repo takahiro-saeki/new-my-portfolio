@@ -39,7 +39,7 @@ class Contact extends Component {
 
   componentDidMount() {
     if(location.search.includes('thanks')) {
-      history.replaceState(null, null, '/');
+      history.replaceState(null, null, '/new-my-portfolio/');
       this.setState({ isOpen: true })
     }
   }
