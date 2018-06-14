@@ -7,6 +7,7 @@
     "fetch-jsonp": "^1.1.3",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.10",
+<<<<<<< HEAD
     "material-ui": "^0.20.1",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
@@ -18,15 +19,35 @@
   },
   "devDependencies": {
     "@storybook/react": "^3.4.7",
+=======
+    "material-ui": "^0.20.0",
+    "prop-types": "^15.6.1",
+    "ramda": "^0.25.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-flexbox-grid": "^2.1.0",
+    "react-scroll": "^1.7.9",
+    "styled-components": "^3.2.6",
+    "uuid": "^3.2.1",
+    "validator": "^10.1.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^3.4.3",
+>>>>>>> 90cb64442308eb6682dbd2e19c1063dd97233adb
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-ramda": "^1.6.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+<<<<<<< HEAD
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
+=======
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+>>>>>>> 90cb64442308eb6682dbd2e19c1063dd97233adb
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-function-bind": "^6.22.0",
@@ -35,7 +56,12 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+<<<<<<< HEAD
     "cross-env": "^5.2.0",
+=======
+    "copy-webpack-plugin": "^4.5.1",
+    "cross-env": "^5.1.4",
+>>>>>>> 90cb64442308eb6682dbd2e19c1063dd97233adb
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
@@ -49,7 +75,11 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
     "file-loader": "^1.1.11",
+<<<<<<< HEAD
     "flow-bin": "^0.74.0",
+=======
+    "flow-bin": "^0.72.0",
+>>>>>>> 90cb64442308eb6682dbd2e19c1063dd97233adb
     "flow-coverage-report": "^0.5.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.1.0",
@@ -60,6 +90,7 @@
     "postcss-size": "^2.0.0",
     "pre-commit": "^1.2.2",
     "precss": "^3.1.2",
+<<<<<<< HEAD
     "prettier": "^1.13.5",
     "puppeteer": "^1.5.0",
     "react-hot-loader": "^4.3.2",
@@ -69,13 +100,25 @@
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.6",
     "webpack-dev-server": "^3.1.4"
+=======
+    "prettier": "^1.12.1",
+    "puppeteer": "^1.3.0",
+    "react-hot-loader": "^4.1.2",
+    "react-test-renderer": "^16.3.2",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.7.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.2"
+>>>>>>> 90cb64442308eb6682dbd2e19c1063dd97233adb
   },
   "license": "MIT",
   "main": "index.js",
   "repository": "https://github.com/takahiro-saeki/new-my-portfolio.git",
   "scripts": {
-    "build": "npm run clean && cross-env webpack --mode production --progress --hide-modules",
-    "clean": "rimraf 'dist/*.{js,json,svg,png,css,woff,woff2,ttf,eot,html}'",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --mode production --progress",
+    "clean": "rimraf 'dist/*.{js,json,svg,png,css,woff,woff2,ttf,eot,html,map}'",
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --progress",
     "lint": "eslint src/js/* --ext .js --ext .jsx --fix --quiet --cache",
     "flow": "flow"

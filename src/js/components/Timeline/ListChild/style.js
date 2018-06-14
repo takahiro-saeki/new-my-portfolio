@@ -6,8 +6,10 @@ export const CompanyArea = styled.div`
   border-radius: 0.5rem;
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
-  height: 100%;
+  height: auto;
   color: #fff;
+  height: 100%;
+  width: 100%;
 `;
 
 export const DescArea = styled.div`
@@ -17,4 +19,5 @@ export const DescArea = styled.div`
   box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px,
     rgba(0, 0, 0, 0.117647) 0px 1px 4px;
   height: 100%;
+  width: 100%;
 `;

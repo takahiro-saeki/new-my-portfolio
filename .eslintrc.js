@@ -47,7 +47,8 @@ module.exports = {
     "react/no-did-mount-set-state": 0,
     "jsx-a11y/no-static-element-interactions": 0,
     "react/forbid-prop-types": 1,
-    "react/jsx-filename-extension": 1
+    "react/jsx-filename-extension": 1,
+    "react/no-did-update-set-state": 0
   },
   "settings": {
     "import/resolver": {

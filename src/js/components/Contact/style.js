@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Container = styled.div`
+export const Container = styled.div`
   box-sizing: border-box;
   padding: 1rem;
   max-width: 800px;
@@ -8,4 +8,8 @@ const Container = styled.div`
   margin: 1rem auto;
 `;
 
-export default Container;
+export const BtnContainer = styled.div`
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 2rem 0;
+`;

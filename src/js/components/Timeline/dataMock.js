@@ -11,7 +11,7 @@ const dataMock = [
   },
   {
     id: 2,
-    title: `Big EC service company's e-book service department.`,
+    title: `Big EC service company's e-book department.`,
     date: '2017/3 - 2018/4',
     content: `
       I'm implementing features for website like carousel, slider, menu button, and more. also,
