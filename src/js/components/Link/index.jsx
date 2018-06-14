@@ -1,5 +1,5 @@
 import React from 'react';
-import { element, string } from 'prop-types';
+import { any, string } from 'prop-types';
 import Container from './style';
 
 const Link = ({ children, href }) => {
@@ -12,7 +12,7 @@ Link.defaultProps = {
 };
 
 Link.propTypes = {
-  children: element,
+  children: any,
   href: string
 };
 
